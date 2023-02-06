@@ -1,4 +1,5 @@
 import useMoneda from '../hooks/useMoneda'
+import useCriptomoneda from '../hooks/useCriptomoneda'
 import styled from '@emotion/styled'
 
 const Boton = styled.input`
@@ -28,9 +29,11 @@ function Formulario () {
     { codigo: 'EUR', nombre: 'Euro' }
   ]
   const [moneda, SelectMonedas] = useMoneda('Elige tu moneda', '', MONEDAS)
+  const [criptomoneda, SelectCripto] = useCriptomoneda('Elige tu Criptomoneda', '')
   return (
     <form>
       <SelectMonedas />
+      <SelectCripto />
       <Boton
         type='submit'
         value='Calcular'
