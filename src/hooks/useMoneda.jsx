@@ -6,7 +6,10 @@ function useMoneda (label, stateInicial, opciones) {
     return (
       <>
         <label>Moneda</label>
-        <select>
+        <select
+          onChange={e => actualizarState(e.target.value)}
+          value={state}
+        >
           <option value=''> {label} </option>
           {opciones.map(moneda => {
             return (

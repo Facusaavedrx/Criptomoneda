@@ -27,7 +27,7 @@ function Formulario () {
     { codigo: 'ARS', nombre: 'Peso Argentino' },
     { codigo: 'EUR', nombre: 'Euro' }
   ]
-  const [moneda, SelectMonedas, actualizarState] = useMoneda('Elige tu moneda', '', MONEDAS)
+  const [moneda, SelectMonedas] = useMoneda('Elige tu moneda', '', MONEDAS)
   return (
     <form>
       <SelectMonedas />
