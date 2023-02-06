@@ -1,3 +1,4 @@
+import Formulario from './components/Formulario'
 import styled from '@emotion/styled'
 import imagen from './cryptomonedas.png'
 
@@ -22,7 +23,7 @@ const Heading = styled.h1`
   font-weight: 700;
   font-size: 50px;
   margin-bottom: 50px;
-  margin-top: 80px
+  margin-top: 80px;
 
   &::after {
     content: '';
@@ -36,15 +37,16 @@ const Heading = styled.h1`
 function App () {
   return (
     <Contenedor>
-      <div>
+      <section>
         <Imagen
           src={imagen}
           alt='Imagen crypto'
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <Heading> Cotiza Criptomonedas al instante</Heading>
-      </div>
+        <Formulario />
+      </section>
     </Contenedor>
   )
 }
